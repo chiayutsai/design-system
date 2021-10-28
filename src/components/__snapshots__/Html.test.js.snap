@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Html render correctly 1`] = `
+<html
+  className="no-js"
+  lang="en"
+>
+  <head>
+    <meta
+      charSet="utf-8"
+    />
+    <meta
+      content="ie=edge"
+      httpEquiv="x-ua-compatible"
+    />
+    <title>
+      title
+    </title>
+    <meta
+      content="description"
+      name="description"
+    />
+    <meta
+      content="width=device-width, initial-scale=1"
+      name="viewport"
+    />
+    <script
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "
+              window.version = \\"2.3.0\\";
+              var querycdn = new URL(window.location).searchParams.get(\\"cdnurl\\") || \\"\\";
+              var publicpath = \\"./assets/\\";
+              window.__CDN_URL_PATH__ = querycdn.replace(/\\\\/$/, \\"\\") + publicpath.replace(querycdn ? \\".\\" : \\"\\", \\"\\");
+              ",
+        }
+      }
+    />
+    <link
+      href="/icon.png"
+      rel="apple-touch-icon"
+    />
+  </head>
+  <body>
+    <div
+      id="app"
+    />
+  </body>
+</html>
+`;

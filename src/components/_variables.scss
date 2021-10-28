@@ -1,0 +1,395 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+/* ========================================================================
+ * SASS variables
+ * ======================================================================== */
+
+/*
+ * Colors
+ * ======================================================================== */
+$tomato: #f02929;
+$tomato-87: rgba($tomato, 0.87);
+$putty: #bdb29b;
+$dodger-blue-87: rgba(70, 152, 248, 0.87);
+$dandelion: #f2e21d;
+$dandelion-40: rgba($dandelion, 0.4);
+$lightish-green-87: rgba(99, 232, 99, 0.87);
+$cherry-30: rgba(224, 0, 30, 0.3);
+$taupe-70: rgba(187, 170, 125, 0.7);
+$bright-red: #ff101a;
+$pale-peach: #ffe2ab;
+$black: #000;
+$neon-green: #06f039;
+$white: #fff;
+
+/*
+ * Typography
+ * ======================================================================== */
+$font-family-base: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;
+
+$font-size-h1: 20px;
+$font-size-h2: 16px;
+$font-size-h3: 14px;
+$font-size-h4: 12px;
+$font-size-h5: 10px;
+
+$font-color-normal: $white;
+$font-color-selected: #fdeed4;
+$font-color-alert: $bright-red;
+
+$font-opacity-bold: 1;
+$font-opacity-active: 0.87;
+$font-opacity-inactive: 0.6;
+$font-opacity-disable: 0.38;
+$font-opacity-selected: 1;
+$font-opacity-error: 1;
+
+/*
+ * Variables
+ * ======================================================================== */
+
+$button-background-normal: #7d7254;
+$button-background-hover: #bbaa7d;
+$button-background-disabled: rgba($black, 0.3);
+
+/*
+ * Locales
+ * ======================================================================== */
+
+$locales: zh-TW, zh-CN, en-US, ja-JP, ko-KR, th-TH, vi-VN, id-ID;
+
+/*
+ * Layout
+ * ======================================================================== */
+$max-content-width: 1000px;
+$header-background-color: $black;
+
+/*
+ * Media queries breakpoints
+ * ======================================================================== */
+$screen-xs-min: 480px; /* Extra small screen / phone */
+$screen-sm-min: 768px; /* Small screen / tablet */
+$screen-md-min: 992px; /* Medium screen / desktop */
+$screen-lg-min: 1200px; /* Large screen / wide desktop */
+
+
+// Theme 網站佈景顏色
+// ---------------------------------------------
+
+//淺色版
+$color-scheme: (
+  'theme-bg-': (
+    '1': #fff,
+    '2': #99bee3,
+    '3': rgba(#fff, 0.3),
+  ),
+  'title-text-': (
+    '1': #1b65c0,
+  ),
+  'headerbar-': (
+    '1': rgba(27, 101, 192, 0.5),
+    '2': #1b65c0,
+    '3': #1db73f,
+    //line
+    '4': #3288f3,
+    '5': rgba(27, 101, 192, 0.3),
+    //hightlight
+    '6': rgba(73, 176, 255, 0.4),
+  ),
+  'ballbar-': (
+    '1': rgba(111, 159, 216, 0.2),
+    '2': #000,
+    '3': #717171,
+  ),
+  'touchbar-': (
+    '1': rgba(#fff, 0.4),
+    '2': #3288f3,
+    '3': #fff,
+    '4': #1b65c0,
+  ),
+  'pay-': (
+    '1': rgba(#fff, 0.5),
+    '2': #1b65c0,
+    '3': rgba(27, 101, 192, 0.3),
+    '4': #fff,
+    '5': rgba(255, 255, 255, 0.5),
+  ),
+  'session-': (
+    '1': #fff,
+    '2': #1b65c0,
+  ),
+  'betting-text-': (
+    '1': #1b65c0,
+    '2': #1b65c0,
+  ),
+  'betting-ball-': (
+    '1': #3288f3,
+    '2': #1b65c0,
+    '3': rgba(27, 101, 192, 0.5),
+  ),
+  'combinations-': (
+    '1': #3288f3,
+  ),
+  'footer-button-': (
+    '1': #3288f3,
+    '2': #fff,
+    '3': #3288f3,
+    '4': #3288f3,
+    '5': #fff,
+    //hover-clear
+    '6': #1d97ff,
+    //hover-confirm
+    '7': #1d97ff,
+    //hover-clear-text
+    '8': #fff,
+    //hover-confirm-text
+    '9': #ffcf30,
+    //active-text
+    '10': #003395,
+  ),
+  'nobet-': (
+    '1': rgba(224, 238, 255, 0.7),
+  ),
+  'hightlight-': (
+    '1': #d90000,
+    '2': #c35767,
+  ),
+  'wrong-pop-': (
+    '1': #fff,
+    '2': #1b65c0,
+    '3': #5f86c5,
+    '4': #fff,
+  ),
+  'comquickBet-container-': (
+    '1': #000,
+    '2': rgba(#000, 0.38),
+    '3': rgba(#000, 0.12),
+  ),
+  'comquickBet-container-bg-': (
+    '1': #fff,
+  ),
+  'white-color-': (
+    '1': #fff,
+    '2': #fefffe,
+  ),
+  'comapct-parlay-delete-bg-': (
+    '1': #828282,
+  ),
+  'comtickets-status-': (
+    '1': #6b9cd6,
+    '2': #ec6363,
+    '3': rgba(#fff, 0.5),
+  ),
+  'comtickets-input-': (
+    '1': rgba(#000, 0.87),
+    '2': rgba(#000, 0.06),
+    '3': #5f86c5,
+    '4': #f5f5f5,
+    '5': #fff,
+    '6': rgba(#000, 0.38),
+    '7': #2196f3,
+    '8': #000,
+    '9': #3a7dc2,
+  ),
+  'bet-confirm-modal-': (
+    '1': #ff7600,
+    '2': #fd622e,
+    '3': #fff,
+  ),
+  'input-button-': (
+    '1': #fff,
+    '2': #000,
+    '3': #f5f5f5,
+    '4': #787878,
+    '5': #fff,
+  ),
+  'chip-': (
+    '1': #000,
+  ),
+  'place-bet-title-': (
+    '1': #757575,
+  ),
+  'result-status-': (
+    '1': rgba(#000, 0.06),
+    '2': rgba(#000, 0.54),
+    '3': rgba(#000, 0.87),
+    '4': #5f86c5,
+    '5': #fff,
+    '6': #fff,
+    '7': #ff851c,
+    '8': #e6f2ff,
+    '9': #1b65c0,
+    '10': #1b65c0,
+    '11': #1b65c0,
+    '12': #fff0f0,
+    '13': #f00,
+  ),
+  'tool-tips-': (
+    '1': rgba(#000, 0.87),
+    '2': #fff5c2,
+    '3': #6884b2,
+    '4': #f5f5f5,
+  )
+);
+
+//深色版
+$color-scheme-dark: (
+  'theme-bg-': (
+    '1': #283a5c,
+    '2': #202329,
+    '3': rgba(#000, 0.1),
+  ),
+  'title-text-': (
+    '1': #fff,
+  ),
+  'headerbar-': (
+    '1': rgba(#fff, 0.5),
+    '2': #fff,
+    '3': #1db73f,
+    '4': rgba(#000, 0.5),
+    '5': rgba(#000, 0.3),
+    //hightlight
+    '6': rgba(73, 176, 255, 0.5),
+  ),
+  'ballbar-': (
+    '1': rgba(0, 0, 0, 0.12),
+    '2': #000,
+    '3': #717171,
+  ),
+  'touchbar-': (
+    '1': rgba(#000, 0.3),
+    '2': #265286,
+    '3': #fff,
+    '4': rgba(#fff, 0.4),
+  ),
+  'pay-': (
+    '1': rgba(112, 112, 112, 0.05),
+    '2': rgba(#fff, 0.4),
+    '3': rgba(38, 82, 134, 0.5),
+    '4': #fff,
+    '5': rgba(112, 112, 112, 0.7),
+  ),
+  'session-': (
+    '1': rgba(#000, 0.3),
+    '2': rgba(#fff, 0.4),
+  ),
+  'betting-text-': (
+    '1': #4c75aa,
+    '2': #fff,
+  ),
+  'betting-ball-': (
+    '1': #265286,
+    '2': #1b65c0,
+    '3': rgba(#1b65c0, 0.5),
+  ),
+  'combinations-': (
+    '1': rgba(#000, 0.5),
+  ),
+  'footer-button-': (
+    '1': #265286,
+    '2': #34393e,
+    '3': #fff,
+    '4': #265286,
+    '5': #fff,
+    //hover-clear
+    '6': #5b626a,
+    //hover-confirm
+    '7': #3288f3,
+    //hover-clear-text
+    '8': #fff,
+    //hover-confirm-text
+    '9': #fff,
+    //active-text
+    '10': #265286,
+  ),
+  'nobet-': (
+    '1': rgba(0, 0, 0, 0.45),
+  ),
+  'hightlight-': (
+    '1': #d90000,
+    '2': #c35767,
+  ),
+  'wrong-pop-': (
+    '1': #265286,
+    '2': #fff,
+    '3': #fff,
+    '4': #1c66c0,
+  ),
+  'comquickBet-container-': (
+    '1': #fff,
+    '2': rgba(#000, 0.38),
+    '3': rgba(#000, 0.12),
+  ),
+  'comquickBet-container-bg-': (
+    '1': #262626,
+  ),
+  'white-color-': (
+    '1': #fff,
+    '2': #fefffe,
+  ),
+  'comapct-parlay-delete-bg-': (
+    '1': #828282,
+  ),
+  'comtickets-status-': (
+    '1': #6b9cd6,
+    '2': #ec6363,
+    '3': rgba(#fff, 0.5),
+  ),
+  'comtickets-input-': (
+    '1': #fff,
+    '2': rgba(#000, 0.06),
+    '3': #3a7dc2,
+    '4': #515151,
+    '5': #000,
+    '6': rgba(#fff, 0.54),
+    '7': #2196f3,
+    '8': #fff,
+    '9': #3a7dc2,
+  ),
+  'bet-confirm-modal-': (
+    '1': #ff7600,
+    '2': #fd622e,
+    '3': #262626,
+  ),
+  'input-button-': (
+    '1': #262626,
+    '2': #e4e4e4,
+    '3': #515151,
+    '4': #636363,
+    '5': #fff,
+  ),
+  'chip-': (
+    '1': rgba(#000, 0.64),
+  ),
+  'place-bet-title-': (
+    '1': #757575,
+  ),
+  'result-status-': (
+    '1': rgba(#fff, 0.06),
+    '2': #fff,
+    '3': #fff,
+    '4': #5f86c5,
+    '5': #fff,
+    '6': #fff,
+    '7': #ff851c,
+    '8': #262626,
+    '9': #1b65c0,
+    '10': #1b65c0,
+    '11': #1b65c0,
+    '12': #262626,
+    '13': #f00,
+  ),
+  'tool-tips-': (
+    '1': rgba(#000, 0.87),
+    '2': #fff5c2,
+    '3': #3a7dc2,
+    '4': #f5f5f5,
+  )
+);

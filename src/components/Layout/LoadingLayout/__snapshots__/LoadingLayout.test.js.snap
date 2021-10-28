@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingLayout render correctly 1`] = `
+<div
+  className="root"
+>
+  <div
+    className="preloader"
+  >
+    <div
+      className="preloader_spiner"
+    >
+      <div
+        className="preloader_circles"
+      >
+        <div
+          className="preloader_circle-1"
+        />
+        <div
+          className="preloader_circle-2"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

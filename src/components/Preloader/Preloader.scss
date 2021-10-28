@@ -1,0 +1,151 @@
+$preloader-color: #0093FC;
+
+@keyframes container-rotate {
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes fill-unfill-rotate {
+  12.5% {
+    transform: rotate(135deg)
+  }
+
+  25% {
+    transform: rotate(270deg)
+  }
+
+  37.5% {
+    transform: rotate(405deg)
+  }
+
+  50% {
+    transform: rotate(540deg)
+  }
+
+  62.5% {
+    transform: rotate(675deg)
+  }
+
+  75% {
+    transform: rotate(810deg)
+  }
+
+  87.5% {
+    transform: rotate(945deg)
+  }
+
+  to {
+    transform: rotate(1080deg)
+  }
+}
+
+@keyframes left-spin {
+  from {
+    transform: rotate(130deg)
+  }
+
+  50% {
+    transform: rotate(-5deg)
+  }
+
+  to {
+    transform: rotate(130deg)
+  }
+}
+
+@keyframes right-spin {
+  from {
+    transform: rotate(-130deg)
+  }
+
+  50% {
+    transform: rotate(5deg)
+  }
+
+  to {
+    transform: rotate(-130deg)
+  }
+}
+
+.preloader {
+  display: flex;
+  padding: 3rem;
+  justify-content: center;
+  border-color: $preloader-color;
+}
+
+.preloader_spiner {
+  display: inline-flex;
+  position: relative;
+  width: 65px;
+  height: 65px;
+  align-self: center;
+  font-size: 0;
+  border-color: inherit;
+  animation: container-rotate 1568ms linear infinite;
+}
+
+.preloader_circles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-color: inherit;
+  opacity: 1;
+  animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
+}
+
+.preloader_circle-1,
+.preloader_circle-2 {
+  display: inline-block;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  border-color: inherit;
+
+  &::before {
+    content: '';
+    width: 200%;
+    height: 100%;
+    border-width: 4px;
+    border-style: solid;
+    border-color: inherit;
+    border-bottom-color: transparent !important;
+    border-radius: 50%;
+    animation: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box
+  }
+}
+
+.preloader_circle-1::before {
+  left: 0;
+  border-right-color: transparent !important;
+  transform: rotate(129deg);
+  animation: left-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both
+}
+
+.preloader_circle-2::before {
+  left: -100%;
+  border-left-color: transparent !important;
+  transform: rotate(-129deg);
+  animation: right-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both
+}
+
+.preloader-mini {
+  padding: 1rem;
+
+  .preloader_spiner {
+    width: 20px;
+    height: 20px;
+  }
+
+  .preloader_circle-1::before,
+  .preloader_circle-2::before {
+    border-width: 2px
+  }
+}

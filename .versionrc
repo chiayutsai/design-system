@@ -1,0 +1,3 @@
+{
+  "issueUrlFormat": "http://redmine.owdev.net/issues/{{id}}"
+}

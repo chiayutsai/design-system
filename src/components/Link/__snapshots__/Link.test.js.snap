@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link render correctly 1`] = `
+<a
+  href="/"
+  onClick={[Function]}
+>
+  <div
+    className="child"
+  />
+</a>
+`;

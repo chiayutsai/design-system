@@ -1,0 +1,21 @@
+.buttons {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 3em;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  background-color: white;
+  font-size: 16px;
+  padding: 6px;
+
+  &.cancel {
+    background-image: linear-gradient(to bottom, #eee, #d9d9d9);
+  }
+
+  &.confirm {
+    color: #fff;
+    background-image: linear-gradient(to bottom, #5f86c5, #0043b4);
+  }
+}

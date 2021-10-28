@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home render correctly 1`] = `
+<div
+  className="root"
+>
+  <div
+    className="container"
+  >
+    <h1>
+      React.js News
+    </h1>
+    <h2>
+      i18n test
+    </h2>
+    <p>
+      Betting
+    </p>
+    <h2>
+      svg test
+    </h2>
+    <div
+      className="flex"
+    >
+      <div
+        className="check"
+      />
+      <div
+        className="check red"
+      />
+      <img
+        alt="check"
+        className="check"
+        src="SvgrURL"
+      />
+      <div
+        className="check-div"
+      />
+    </div>
+    <h2>
+      loader test
+    </h2>
+    <h3>
+      large image
+    </h3>
+    <div
+      className="flex"
+    >
+      <div
+        className="large-image background-image"
+      />
+      <img
+        alt=""
+        className="large-image"
+        src="artificial-intelligence-machine.jpg"
+      />
+    </div>
+    <h3>
+      small image
+    </h3>
+    <div
+      className="flex"
+    >
+      <div
+        className="small-image background-image"
+      />
+      <img
+        alt=""
+        className="small-image"
+        src="positive-vote.png"
+      />
+    </div>
+    <h3>
+      json
+    </h3>
+    {"glossary":{"title":"example glossary","GlossDiv":{"title":"S","GlossList":{"GlossEntry":{"ID":"SGML","SortAs":"SGML","GlossTerm":"Standard Generalized Markup Language","Acronym":"SGML","Abbrev":"ISO 8879:1986","GlossDef":{"para":"A meta-markup language, used to create markup languages such as DocBook.","GlossSeeAlso":["GML","XML"]},"GlossSee":"markup"}}}}}
+    <h3>
+      txt
+    </h3>
+    
+    <h2>
+      postcss loader test:
+    </h2>
+    <h3
+      className="hoverable"
+    >
+      hover me!
+    </h3>
+  </div>
+</div>
+`;

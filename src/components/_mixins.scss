@@ -1,0 +1,118 @@
+@import '~components/variables';
+
+// 瀏覽器修正
+// -----------------------------
+// IE11 Bug - 修正 flex設定最小高度後 align-items: center 無法置中問題
+@mixin IE11_flex_minHeightCenter() {
+  content: '';
+  flex: 0;
+  display: block;
+  min-height: inherit;
+  font-size: 0;
+}
+
+// IE11 Hacks
+// - 實際上 9 以上的版本即會套用，但由於我們不需支援 9,10，故當作為 11 專用
+// - 此寫法較為簡易，且可直接放置巢狀選擇器內，使用上較為靈活，故選用
+@mixin IE11_hacks() {
+  @media screen and (min-width: 0\0) {
+    @content; // 自訂內容
+  }
+}
+
+// FireFox Hacks
+@mixin FireFox_hacks() {
+  @-moz-document url-prefix() {
+    @content; // 自訂內容
+  }
+}
+
+// 小手機修正
+// -----------------------------
+// 小於 360 - iPhone 5 等
+@mixin SmallPhone_fix() {
+  @media (max-width: 359px) {
+    @content; // 自訂內容
+  }
+}
+
+// has-scroll
+@mixin has-scroll($xy) {
+  overflow-#{$xy}: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+// 偵測是否有 hover 行為 判斷桌機平台/手機平台
+@mixin hover($value: hover) {
+  @media (hover: $value) {
+    @content; // 自訂內容
+  }
+}
+
+// 手機平台 - 取消用戶選取文字避免操作誤觸
+// -----------------------------
+@include hover(none) {
+  body {
+    user-select: none;
+  }
+}
+
+// 手機平台 - /* 目前未使用 */
+// -----------------------------
+@mixin mobileBottom_Fix($property, $value) {
+  @include hover(none) {
+    #{$property}: calc(#{$value} + constant(safe-area-inset-bottom));
+    #{$property}: calc(#{$value} + env(safe-area-inset-bottom));
+  }
+}
+
+// 桌機平台 自定義 Scroll 樣式 (包含 RWD 手機版面)
+// -----------------------------
+@include hover() {
+  ::-webkit-scrollbar {
+    width: 12px; // 縱軸寬度
+    height: 12px; // 橫軸高度
+  }
+
+  /* Scroll 軌道 */
+  ::-webkit-scrollbar-track {
+    background-color: var(--theme-bg-6);
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.54);
+  }
+
+  /* Scroll 本身 */
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--theme-bg-4);
+    border-radius: 2em;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.87);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.54);
+  }
+}
+
+// 文字多行點點點 (chrome / firefox / ios )
+// ----------------------
+@mixin line-clamp($value) {
+  // 使用注意:
+  // 1. autoprefixer 會自動刪除某些舊語法 (如 -webkit-box-orient)
+  // 2. css 注解使用 /* autoprefixer: ignore next */ 後續語法即不會被移除
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: $value;
+  -webkit-box-orient: vertical;
+}
+
+// 雙色分隔線(水平/垂直)
+// ----------------------
+@mixin border-double-color($direction) {
+  @if $direction == x {
+    border-top-width: 1px;
+    border-top-color: rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  } @else if $direction == y {
+    border-left-width: 1px;
+    border-left-color: rgba(0, 0, 0, 0.2);
+    box-shadow: inset 1px 0 0 0 rgba(255, 255, 255, 0.1);
+  }
+}

@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer render correctly 1`] = `
+<div
+  className="root"
+>
+  <div
+    className="container"
+  >
+    <span
+      className="text"
+    >
+      © Your Company
+    </span>
+    <span
+      className="spacer"
+    >
+      ·
+    </span>
+    <a
+      className="link"
+      href="/"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+    <span
+      className="spacer"
+    >
+      ·
+    </span>
+    <a
+      className="link"
+      href="/admin"
+      onClick={[Function]}
+    >
+      Admin
+    </a>
+    <span
+      className="spacer"
+    >
+      ·
+    </span>
+    <span
+      className="link"
+      onClick={[Function]}
+      role="presentation"
+    >
+      Privacy
+    </span>
+    <span
+      className="spacer"
+    >
+      ·
+    </span>
+    <a
+      className="link"
+      href="/not-found"
+      onClick={[Function]}
+    >
+      Not Found
+    </a>
+  </div>
+</div>
+`;

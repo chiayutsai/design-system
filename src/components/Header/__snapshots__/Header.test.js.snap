@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header render correctly 1`] = `
+<div
+  className="root"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="root"
+      role="navigation"
+    >
+      <a
+        className="link"
+        href="/about"
+        onClick={[Function]}
+      >
+        About
+      </a>
+      <a
+        className="link"
+        href="/contact"
+        onClick={[Function]}
+      >
+        Contact
+      </a>
+      <span
+        className="spacer"
+      >
+         | 
+      </span>
+      <a
+        className="link"
+        href="/login"
+        onClick={[Function]}
+      >
+        Log in
+      </a>
+      <span
+        className="spacer"
+      >
+        or
+      </span>
+      <a
+        className="link highlight"
+        href="/register"
+        onClick={[Function]}
+      >
+        Sign up
+      </a>
+    </div>
+    <a
+      className="brand"
+      href="/"
+      onClick={[Function]}
+    >
+      <img
+        alt="React"
+        height="38"
+        src="logo-small.png"
+        srcSet="logo-small@2x.png 2x"
+        width="38"
+      />
+      <span
+        className="brand-txt"
+      >
+        Your Company
+      </span>
+    </a>
+    <div
+      className="banner"
+    >
+      <h1
+        className="banner-title"
+      >
+        React
+      </h1>
+      <p
+        className="banner-desc"
+      >
+        Complex web apps made easy
+      </p>
+    </div>
+  </div>
+</div>
+`;

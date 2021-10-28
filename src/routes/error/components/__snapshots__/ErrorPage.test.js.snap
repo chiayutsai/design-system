@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorPage render correctly 1`] = `
+Array [
+  <h1>
+    Error 错误
+  </h1>,
+  <p>
+    系统错误，请稍后再试。[
+    99999
+    ]
+  </p>,
+  <p>
+    System error, please try again later.[
+    99999
+    ]
+  </p>,
+]
+`;

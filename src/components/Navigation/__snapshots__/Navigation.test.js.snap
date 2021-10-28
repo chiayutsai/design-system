@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation render correctly 1`] = `
+<div
+  className="root"
+  role="navigation"
+>
+  <a
+    className="link"
+    href="/about"
+    onClick={[Function]}
+  >
+    About
+  </a>
+  <a
+    className="link"
+    href="/contact"
+    onClick={[Function]}
+  >
+    Contact
+  </a>
+  <span
+    className="spacer"
+  >
+     | 
+  </span>
+  <a
+    className="link"
+    href="/login"
+    onClick={[Function]}
+  >
+    Log in
+  </a>
+  <span
+    className="spacer"
+  >
+    or
+  </span>
+  <a
+    className="link highlight"
+    href="/register"
+    onClick={[Function]}
+  >
+    Sign up
+  </a>
+</div>
+`;
